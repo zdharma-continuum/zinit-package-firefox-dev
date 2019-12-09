@@ -35,7 +35,7 @@ to point to the snippet's directory.
 The Zplugin command executed will be equivalent to:
 
 ```zsh
-zplugin id-as"firefox-dev" as"command" lucid mv"firefox-dev -> firefox.tar.bz2" \ 
+zplugin id-as"firefox-dev" as"command" lucid mv"firefox-dev -> firefox.tar.bz2" \
     atclone"rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox-dev ff; \
         mv ff/*(D) . >/dev/null; rmdir ff" \
     pick"firefox(|-bin)" atpull"%atclone" nocompile is-snippet for \
