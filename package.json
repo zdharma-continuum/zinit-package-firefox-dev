@@ -49,7 +49,7 @@
                 "as": "command",
 		"pick": "firefox(|-bin)",
 		"nocompile": "",
-                "mv": "firefox-dev -> firefox.tar.bz2",
+                "mv": "%ID% -> firefox.tar.bz2",
                 "atclone": "rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox ff; mv ff/*(D) . >/dev/null; rmdir ff",
                 "atpull": "%atclone"
             },
@@ -58,7 +58,7 @@
                 "lucid": "",
                 "as": "null",
 		"nocompile": "",
-                "mv": "firefox-dev -> firefox.tar.bz2",
+                "mv": "%ID% -> firefox.tar.bz2",
                 "atclone": "rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox ff; mv ff/*(D) . >/dev/null; rmdir ff",
                 "atpull": "%atclone",
 		"sbin": "firefox-bin -> firefox"
