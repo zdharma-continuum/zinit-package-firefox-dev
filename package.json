@@ -1,0 +1,68 @@
+{
+    "_from": "firefox-dev@^72.0.0",
+    "_id": "zsh-firefox-dev@72.0.0",
+    "_inBundle": false,
+    "_location": "/zsh-firefox-dev",
+    "_phantomChildren": {},
+    "_requested": {
+        "type": "range",
+        "registry": true,
+        "raw": "firefox-dev@^72.0.0",
+        "name": "firefox-dev",
+        "escapedName": "firefox-dev",
+        "rawSpec": "^72.0.0",
+        "saveSpec": null,
+        "fetchSpec": "^72.0.0"
+    },
+    "_requiredBy": [],
+    "_spec": "firefox-dev@^72.0.0",
+    "_where": "/root/github2/pkg-firefox-dev",
+    "author": "Mozilla Foundation",
+    "bugs": {
+        "url": "https://bugzilla.mozilla.org/"
+    },
+    "version": "1.18.1",
+    "contributors": [],
+    "dependencies": {},
+    "deprecated": false,
+    "description": "Automatic privacy is here. Download Firefox to block over 2000 trackers.",
+    "devDependencies": {},
+    "homepage": "https://github.com/aws/firefox-dev",
+    "keywords": [
+        "web browser",
+        "browser",
+        "internet browser",
+        "zsh"
+    ],
+    "license": "Mozilla Public License",
+    "name": "zsh-firefox-dev",
+    "zsh-data": {
+        "plugin-info": {
+            "url": "https://download.mozilla.org/?product=firefox-devedition-latest-ssl&os=${${${(M)OSTYPE##linux}:+linux64}:-${${(M)OSTYPE##darwin}:+osx}}&lang=en-US",
+            "version": "72.0b3",
+            "message": "A snippet providing Firefox Developer Edition."
+        },
+        "zplugin-ices": {
+            "default": {
+                "is-snippet": "",
+                "lucid": "",
+                "as": "command",
+		"pick": "firefox(|-bin)",
+		"nocompile": "",
+                "mv": "firefox-dev -> firefox.tar.bz2",
+                "atclone": "rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox ff; mv ff/*(D) . >/dev/null; rmdir ff",
+                "atpull": "%atclone"
+            },
+            "bgn": {
+                "is-snippet": "",
+                "lucid": "",
+                "as": "null",
+		"nocompile": "",
+                "mv": "firefox-dev -> firefox.tar.bz2",
+                "atclone": "rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox ff; mv ff/*(D) . >/dev/null; rmdir ff",
+                "atpull": "%atclone",
+		"sbin": "firefox-bin -> firefox"
+            }
+        }
+    }
+}
