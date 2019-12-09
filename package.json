@@ -54,6 +54,8 @@
                 "atpull": "%atclone"
             },
             "bgn": {
+                "required": "bgn",
+
                 "is-snippet": "",
                 "lucid": "",
                 "as": "null",
