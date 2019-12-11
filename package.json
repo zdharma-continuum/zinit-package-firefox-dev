@@ -21,7 +21,7 @@
     "bugs": {
         "url": "https://bugzilla.mozilla.org/"
     },
-    "version": "1.18.1",
+    "version": "1.18.2",
     "contributors": [],
     "dependencies": {},
     "deprecated": false,
@@ -47,23 +47,22 @@
                 "is-snippet": "",
                 "lucid": "",
                 "as": "command",
-		"pick": "firefox(|-bin)",
-		"nocompile": "",
+                "pick": "firefox(|-bin)",
+                "nocompile": "",
                 "mv": "%ID% -> firefox.tar.bz2",
                 "atclone": "rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox ff; mv ff/*(D) . >/dev/null; rmdir ff",
                 "atpull": "%atclone"
             },
             "bgn": {
                 "required": "bgn",
-
                 "is-snippet": "",
                 "lucid": "",
                 "as": "null",
-		"nocompile": "",
+                "nocompile": "",
                 "mv": "%ID% -> firefox.tar.bz2",
                 "atclone": "rm -rf *~*.tar.bz2(N); tar jxf *.tar.bz2; mv firefox ff; mv ff/*(D) . >/dev/null; rmdir ff",
                 "atpull": "%atclone",
-		"sbin": "firefox-bin -> firefox"
+                "sbin": "firefox-bin -> firefox"
             }
         }
     }
