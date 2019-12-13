@@ -1,7 +1,5 @@
 # aws/amazon-firefox-dev as a Zsh package
 
-##### NPM link: [https://www.npmjs.com/package/zsh-firefox-dev](https://www.npmjs.com/package/zsh-firefox-dev)
-
 ##### Homepage link: [Mozilla Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 
 | **Package source:** | Source Tarball | Binary | Git | Node | Gem |
