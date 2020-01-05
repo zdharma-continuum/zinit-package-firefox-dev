@@ -49,7 +49,7 @@
                 "as": "command",
                 "pick": "firefox(|-bin)",
                 "nocompile": "",
-                "atclone": "local ext=\"${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}\"; command mv -vf %ID% firefox.$ext; zpextract firefox.$ext ${${(M)OSTYPE#darwin}:---move}",
+                "atclone": "local ext=\"${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}\"; command mv -vf %ID% firefox.$ext; zpextract firefox.$ext ${${OSTYPE:#darwin*}:+--move}",
                 "atpull": "%atclone"
             },
             "bgn": {
@@ -58,7 +58,7 @@
                 "lucid": "",
                 "as": "null",
                 "nocompile": "",
-                "atclone": "local ext=\"${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}\"; command mv -vf %ID% firefox.$ext; zpextract firefox.$ext ${${(M)OSTYPE#darwin}:---move}",
+                "atclone": "local ext=\"${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}\"; command mv -vf %ID% firefox.$ext; zpextract firefox.$ext ${${OSTYPE:#darwin*}:+--move}",
                 "atpull": "%atclone",
                 "sbin": "firefox-bin -> firefox"
             }
