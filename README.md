@@ -33,7 +33,7 @@ to point to the snippet's directory.
 The Zplugin command executed will be equivalent to:
 
 ```zsh
-zplugin id-as"firefox-dev" as"command" lucid mv"firefox-dev -> firefox.tar.bz2" \
+zplugin id-as"firefox-dev" as"command" lucid" \
     atclone'local ext="${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}"; \
         zpextract %ID% $ext --norm ${${OSTYPE:#darwin*}:+--move}'
     pick"firefox(|-bin)" atpull"%atclone" nocompile is-snippet for \
@@ -50,7 +50,7 @@ method of providing the binary to the command line.
 The Zplugin command executed will be equivalent to:
 
 ```zsh
-zplugin id-as"firefox-dev" as"null" lucid mv"firefox-dev -> firefox.tar.bz2" \
+zplugin id-as"firefox-dev" as"null" lucid \
     atclone'local ext="${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}"; \
         zpextract %ID% $ext --norm ${${OSTYPE:#darwin*}:+--move}'
     atpull"%atclone" nocompile is-snippet for \
