@@ -47,7 +47,7 @@
                 "is-snippet": "",
                 "lucid": "",
                 "as": "command",
-                "pick": "**/firefox(|-bin)",
+                "pick": "**/firefox(|-bin)(|.exe)",
                 "nocompile": "",
                 "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract %ID% $ext --norm ${${OSTYPE:#(#i)(darwin|cygwin|win|wsl)*}:+--move};",
                 "atpull": "%atclone"
@@ -60,7 +60,7 @@
                 "nocompile": "",
                 "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract %ID% $ext --norm ${${OSTYPE:#(#i)(darwin|cygwin|win|wsl)*}:+--move};",
                 "atpull": "%atclone",
-                "sbin": "**/firefox-bin -> firefox"
+                "sbin": "**/firefox-bin(|.exe) -> firefox"
             }
         }
     }
