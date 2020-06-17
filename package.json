@@ -49,7 +49,7 @@
                 "as": "command",
                 "pick": "**/firefox(|-bin)",
                 "nocompile": "",
-                "atclone": "local ext=\"${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}\"; zpextract %ID% $ext --norm ${${OSTYPE:#darwin*}:+--move};",
+                "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract %ID% $ext --norm ${${OSTYPE:#darwin*}:+--move};",
                 "atpull": "%atclone"
             },
             "bgn": {
@@ -58,7 +58,7 @@
                 "lucid": "",
                 "as": "null",
                 "nocompile": "",
-                "atclone": "local ext=\"${${${(M)OSTYPE#linux*}:+tar.bz2}:-dmg}\"; zpextract %ID% $ext --norm ${${OSTYPE:#darwin*}:+--move};",
+                "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract %ID% $ext --norm ${${OSTYPE:#darwin*}:+--move};",
                 "atpull": "%atclone",
                 "sbin": "**/firefox-bin -> firefox"
             }
