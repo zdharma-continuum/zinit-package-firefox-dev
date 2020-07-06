@@ -1,4 +1,4 @@
-# aws/amazon-firefox-dev as a Zsh package
+# Firefox Developer Edition as a Zsh package
 
 ##### Homepage link: [Mozilla Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
 
