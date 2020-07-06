@@ -48,7 +48,8 @@
                 "as": "command",
                 "pick": "**/firefox(|-bin)(|.exe)",
                 "nocompile": "",
-                "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract %ID% $ext --norm ${${OSTYPE:#(#i)(darwin|cygwin|win|wsl)*}:+--move};",
+                "mv": "%ID% → ff.pkg",
+                "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract ff.pkg $ext --norm ${${OSTYPE:#(#i)(darwin|cygwin|win|wsl)*}:+--move}; command mv ff.pkg %ID%;",
                 "atpull": "%atclone"
             },
             "bgn": {
@@ -57,7 +58,8 @@
                 "lucid": "",
                 "as": "null",
                 "nocompile": "",
-                "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract %ID% $ext --norm ${${OSTYPE:#(#i)(darwin|cygwin|win|wsl)*}:+--move};",
+                "mv": "%ID% → ff.pkg",
+                "atclone": "local -A map; map=( '(#i)linux*' tar.bz2 '(#i)(cygwin|win|wsl)*' exe '(#i)darwin*' dmg ); local ext=\"${map[(k)$OSTYPE]}\"; zpextract ff.pkg $ext --norm ${${OSTYPE:#(#i)(darwin|cygwin|win|wsl)*}:+--move}; command mv ff.pkg %ID%;",
                 "atpull": "%atclone",
                 "sbin": "**/firefox(.exe|-bin) -> firefox"
             }
